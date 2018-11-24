@@ -23,7 +23,7 @@ module.exports = function sourceMap(psModule, js) {
 
   const sourceMapPath = path.join(path.dirname(jsPath), 'index.js.map');
 
-  const isSourceMapsEnabled = options.pscArgs && options.pscArgs.sourceMaps;
+  const isSourceMapsEnabled = options.pscArgs && options.pscArgs.codegen == "sourcemaps";
 
   return new Promise((resolve, reject) => {
     if (!isSourceMapsEnabled) {
